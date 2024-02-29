@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif; /* Serif font */
+    background: black;
+    color: white;
+}
+
+#starfield {
+    position: fixed; /* Ensures background is fixed and covers entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure it's behind the content */
+}
+
+.container {
+    padding-top: 60px; /* Increased top padding */
+    padding-left: 5px; /* Halved left padding */
+    margin-left: 5%; /* Shift the column to the left */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px; /* Add padding below the h2 */
+}
+
+.header h2 {
+    font-size: 24px;
+    margin: 0;
+    padding-left: 0; /* Removed right padding */
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    animation: pulseColor 4s infinite;
+}
+
+
+.header h2:hover {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+}
+
+.nav {
+    padding: 10px 10px; /* Adjusted padding */
+    text-align: right;
+    
+}
+
+nav a.active, nav a.active:link, nav a.active:visited {
+    color: grey; /* Change color to grey */
+    text-decoration: none; /* Optional: Removes underline */
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+    
+}
+
+nav a.active:hover {
+    color: orange;
+    text-shadow: 0 0 10px orange;
+}
+
+.content {
+    padding: 20px 10px; /* Halved left padding for content */
+    text-align: justify;
+}
+
+.content h2 {
+    font-size: 20px; /* Smaller font size for section titles */
+    color: white; /* Grey color for section titles */
+    font-style: italic;
+}
+
+.content a {
+    color: grey; /* Grey color for links */
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.content a:hover {
+    color: orange; 
+    text-shadow: 0 0 10px orange;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseColor {
+    0%, 100% {
+        text-shadow: 0 0 0px white;
+    }
+    50% {
+        text-shadow: 0 0 15px white;
+    }
+}
