@@ -18,3 +18,29 @@ document.addEventListener('DOMContentLoaded', function () {
         starfield.appendChild(star);
     }
 });
+
+const blob = document.getElementById('blob');
+const orbiters = document.querySelectorAll('.orbiter');
+const orbitRadius = 30; // The radius of the orbit
+let angle = 0;
+
+document.addEventListener('pointermove', (event) => {
+  const { clientX, clientY } = event;
+  blob.style.left = clientX + 'px';
+  blob.style.top = clientY + 'px';
+});
+
+function rotateOrbiters() {
+  const angleIncrement = 2 * Math.PI / orbiters.length;
+  orbiters.forEach((orbiter, index) => {
+    const orbiterAngle = angle + index * angleIncrement;
+    const x = Math.cos(orbiterAngle) * orbitRadius;
+    const y = Math.sin(orbiterAngle) * orbitRadius;
+    orbiter.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  angle += 0.015; // Adjust the speed of rotation
+  requestAnimationFrame(rotateOrbiters);
+}
+
+rotateOrbiters();
