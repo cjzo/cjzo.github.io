@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     
-    font-family: 'Times New Roman', Times, serif; /* Serif font */
+    font-family: 'Times New Roman', Times, serif; 
     background: black;
     color: white;
 }
@@ -18,9 +18,9 @@ body, html {
 }
 
 .container {
-    padding-top: 60px; /* Increased top padding */
-    padding-left: 5px; /* Halved left padding */
-    margin-left: 5%; /* Shift the column to the left */
+    padding-top: 60px; 
+    padding-left: 5px; 
+    margin-left: 5%; 
     z-index: 11;
 }
 
@@ -28,13 +28,13 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px; /* Add padding below the h2 */
+    padding-bottom: 20px; 
 }
 
 .header h2 {
     font-size: 24px;
     margin: 0;
-    padding-left: 0; /* Removed right padding */
+    padding-left: 0; 
     transition: color 0.5s ease, text-shadow 0.5s ease;
     animation: pulseColor 4s infinite;
 }
@@ -46,14 +46,14 @@ body, html {
 }
 
 .nav {
-    padding: 10px 10px; /* Adjusted padding */
+    padding: 10px 10px;
     text-align: right;
     
 }
 
 nav a.active, nav a.active:link, nav a.active:visited {
-    color: grey; /* Change color to grey */
-    text-decoration: none; /* Optional: Removes underline */
+    color: grey;
+    text-decoration: none; 
     transition: color 0.5s ease, text-shadow 0.5s ease;
     
 }
@@ -64,18 +64,18 @@ nav a.active:hover {
 }
 
 .content {
-    padding: 20px 10px; /* Halved left padding for content */
+    padding: 20px 10px;
     text-align: justify;
 }
 
 .content h2 {
-    font-size: 20px; /* Smaller font size for section titles */
-    color: white; /* Grey color for section titles */
+    font-size: 20px;
+    color: white; 
     font-style: italic;
 }
 
 .content a {
-    color: grey; /* Grey color for links */
+    color: grey; 
     transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
@@ -140,17 +140,18 @@ nav a.active:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    margin-top: 2vh;
+    height: 95vh;
+    margin-top: 1vh;
     position: relative;
     z-index: 20; 
 }
 
 .resume-pdf {
     width: 80vw; 
-    height: 80vh;
+    height: 90vh;
     max-width: 100%; 
-    border: none; 
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -177,3 +178,4 @@ nav a.active:hover {
     color: orange;
     text-shadow: 0 0 10px orange;
 }
+
